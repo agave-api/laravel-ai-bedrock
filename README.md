@@ -4,12 +4,23 @@ AWS Bedrock provider for the [Laravel AI SDK](https://github.com/laravel/ai).
 
 This package adds first-class AWS Bedrock support to the Laravel AI SDK, allowing you to use Bedrock-hosted models (Claude, Titan, etc.) with Laravel's agent system, embeddings, and streaming APIs.
 
+## Why this package exists
+
+The official `laravel/ai` SDK does not include a Bedrock provider, and the upstream `prism-php/bedrock` package is missing streaming support and has unresolved bugs. This package:
+
+1. Bridges `laravel/ai` and AWS Bedrock via `prism-php/bedrock`
+2. Uses a [fork of `prism-php/bedrock`](https://github.com/wojt-janowski/bedrock) that adds:
+   - **Streaming support** for both Converse and Anthropic schemas (tool calling included)
+   - **ToolChoiceMap fix** for invalid payloads in both schemas
+
+These fixes have been submitted upstream. Once merged, this package will switch back to the official `prism-php/bedrock`.
+
 ## Requirements
 
 - PHP 8.4+
 - Laravel 12+
-- `laravel/ai` ^0.2
-- `prism-php/bedrock` ^1.8
+- `laravel/ai` ^0.3
+- `prism-php/bedrock` (via [fork](https://github.com/wojt-janowski/bedrock))
 
 ## Installation
 
