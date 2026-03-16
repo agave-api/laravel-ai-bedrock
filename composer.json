@@ -8,16 +8,10 @@
       "name": "Wojt Janowski"
     }
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/wojt-janowski/bedrock.git"
-    }
-  ],
   "require": {
     "php": "^8.4",
     "laravel/ai": "^0.3",
-    "prism-php/bedrock": "dev-dev"
+    "prism-php/bedrock": "^1.8"
   },
   "require-dev": {
     "orchestra/testbench": "^10.0",

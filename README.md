@@ -24,6 +24,16 @@ These fixes have been submitted upstream. Once merged, this package will switch 
 
 ## Installation
 
+This package requires a [fork of `prism-php/bedrock`](https://github.com/wojt-janowski/bedrock) for streaming support and bug fixes. Add the following repository to your project's `composer.json` so Composer resolves from the fork:
+
+```json
+"repositories": [
+    {"type": "vcs", "url": "https://github.com/wojt-janowski/bedrock.git"}
+]
+```
+
+Then install:
+
 ```bash
 composer require wojt-janowski/laravel-ai-bedrock
 ```
