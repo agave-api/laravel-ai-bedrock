@@ -22,19 +22,9 @@ These fixes have been submitted upstream. Once merged, this package will switch 
 - PHP 8.4+
 - Laravel 12+
 - `laravel/ai` ^0.3
-- `clinically/prism-bedrock` (via [clinically-au/prism-bedrock](https://github.com/clinically-au/prism-bedrock))
+- `clinically/prism-bedrock`
 
 ## Installation
-
-This package requires [`clinically/prism-bedrock`](https://github.com/clinically-au/prism-bedrock) for streaming support and bug fixes. Add the following repository to your project's `composer.json` so Composer resolves from the fork:
-
-```json
-"repositories": [
-    {"type": "vcs", "url": "https://github.com/clinically-au/prism-bedrock.git"}
-]
-```
-
-Then install:
 
 ```bash
 composer require clinically/laravel-ai-bedrock
