@@ -1,12 +1,12 @@
 <?php
 
-namespace WojtJanowski\LaravelAiBedrock\Tests;
+namespace Clinically\LaravelAiBedrock\Tests;
 
 use Laravel\Ai\Ai;
 use LogicException;
 use Orchestra\Testbench\TestCase;
-use WojtJanowski\LaravelAiBedrock\BedrockProvider;
-use WojtJanowski\LaravelAiBedrock\BedrockServiceProvider;
+use Clinically\LaravelAiBedrock\BedrockProvider;
+use Clinically\LaravelAiBedrock\BedrockServiceProvider;
 
 class ServiceProviderTest extends TestCase
 {

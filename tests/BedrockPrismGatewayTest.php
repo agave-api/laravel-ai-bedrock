@@ -1,13 +1,13 @@
 <?php
 
-namespace WojtJanowski\LaravelAiBedrock\Tests;
+namespace Clinically\LaravelAiBedrock\Tests;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Laravel\Ai\Gateway\TextGenerationOptions;
 use Orchestra\Testbench\TestCase;
 use Prism\Prism\Facades\Prism;
-use WojtJanowski\LaravelAiBedrock\BedrockPrismGateway;
-use WojtJanowski\LaravelAiBedrock\BedrockProvider;
+use Clinically\LaravelAiBedrock\BedrockPrismGateway;
+use Clinically\LaravelAiBedrock\BedrockProvider;
 
 class BedrockPrismGatewayTest extends TestCase
 {

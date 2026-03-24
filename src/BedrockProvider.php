@@ -1,6 +1,6 @@
 <?php
 
-namespace WojtJanowski\LaravelAiBedrock;
+namespace Clinically\LaravelAiBedrock;
 
 use Laravel\Ai\Contracts\Providers\EmbeddingProvider;
 use Laravel\Ai\Contracts\Providers\TextProvider;

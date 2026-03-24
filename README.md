@@ -8,34 +8,36 @@ This package adds first-class AWS Bedrock support to the Laravel AI SDK, allowin
 
 The official `laravel/ai` SDK does not include a Bedrock provider, and the upstream `prism-php/bedrock` package is missing streaming support and has unresolved bugs. This package:
 
-1. Bridges `laravel/ai` and AWS Bedrock via `prism-php/bedrock`
-2. Uses a [fork of `prism-php/bedrock`](https://github.com/wojt-janowski/bedrock) that adds:
+1. Bridges `laravel/ai` and AWS Bedrock via `clinically/prism-bedrock`
+2. Uses [`clinically/prism-bedrock`](https://github.com/clinically-au/prism-bedrock), a fork of `prism-php/bedrock` that adds:
    - **Streaming support** for both Converse and Anthropic schemas (tool calling included)
    - **ToolChoiceMap fix** for invalid payloads in both schemas
 
 These fixes have been submitted upstream. Once merged, this package will switch back to the official `prism-php/bedrock`.
+
+> **Note:** This package was previously published as `wojt-janowski/laravel-ai-bedrock`. If you're migrating, update your `composer.json` to use `clinically/laravel-ai-bedrock`.
 
 ## Requirements
 
 - PHP 8.4+
 - Laravel 12+
 - `laravel/ai` ^0.3
-- `prism-php/bedrock` (via [fork](https://github.com/wojt-janowski/bedrock))
+- `clinically/prism-bedrock` (via [clinically-au/prism-bedrock](https://github.com/clinically-au/prism-bedrock))
 
 ## Installation
 
-This package requires a [fork of `prism-php/bedrock`](https://github.com/wojt-janowski/bedrock) for streaming support and bug fixes. Add the following repository to your project's `composer.json` so Composer resolves from the fork:
+This package requires [`clinically/prism-bedrock`](https://github.com/clinically-au/prism-bedrock) for streaming support and bug fixes. Add the following repository to your project's `composer.json` so Composer resolves from the fork:
 
 ```json
 "repositories": [
-    {"type": "vcs", "url": "https://github.com/wojt-janowski/bedrock.git"}
+    {"type": "vcs", "url": "https://github.com/clinically-au/prism-bedrock.git"}
 ]
 ```
 
 Then install:
 
 ```bash
-composer require wojt-janowski/laravel-ai-bedrock
+composer require clinically/laravel-ai-bedrock
 ```
 
 The service provider is auto-discovered via Laravel's package discovery.
@@ -147,7 +149,7 @@ The Laravel AI SDK's `PrismGateway` uses a hard-coded `match` statement for prov
 
 1. Extends `PrismGateway` with `BedrockPrismGateway` to handle the `'bedrock'` driver
 2. Registers the Bedrock driver via `Ai::extend()` using this custom gateway
-3. Maps AWS credentials to the format expected by `prism-php/bedrock`
+3. Maps AWS credentials to the format expected by `clinically/prism-bedrock`
 
 ## Credits
 
