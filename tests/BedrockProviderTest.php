@@ -1,11 +1,11 @@
 <?php
 
-namespace Clinically\LaravelAiBedrock\Tests;
+namespace AgaveApi\LaravelAiBedrock\Tests;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Orchestra\Testbench\TestCase;
-use Clinically\LaravelAiBedrock\BedrockPrismGateway;
-use Clinically\LaravelAiBedrock\BedrockProvider;
+use AgaveApi\LaravelAiBedrock\BedrockPrismGateway;
+use AgaveApi\LaravelAiBedrock\BedrockProvider;
 
 class BedrockProviderTest extends TestCase
 {

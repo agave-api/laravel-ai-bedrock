@@ -1,6 +1,6 @@
 <?php
 
-namespace Clinically\LaravelAiBedrock;
+namespace AgaveApi\LaravelAiBedrock;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\ServiceProvider;

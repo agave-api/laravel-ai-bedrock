@@ -1,15 +1,15 @@
 {
-  "name": "clinically/laravel-ai-bedrock",
+  "name": "agave-api/laravel-ai-bedrock",
   "description": "AWS Bedrock provider for the Laravel AI SDK",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
-      "name": "Clinically"
+      "name": "Agave API"
     }
   ],
   "require": {
-    "php": "^8.4",
+    "php": "^8.3",
     "laravel/ai": "^0.3",
     "clinically/prism-bedrock": "^0.1"
   },
@@ -19,18 +19,18 @@
   },
   "autoload": {
     "psr-4": {
-      "Clinically\\LaravelAiBedrock\\": "src/"
+      "AgaveApi\\LaravelAiBedrock\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Clinically\\LaravelAiBedrock\\Tests\\": "tests/"
+      "AgaveApi\\LaravelAiBedrock\\Tests\\": "tests/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Clinically\\LaravelAiBedrock\\BedrockServiceProvider"
+        "AgaveApi\\LaravelAiBedrock\\BedrockServiceProvider"
       ]
     }
   },

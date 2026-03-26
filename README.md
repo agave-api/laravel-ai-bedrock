@@ -15,11 +15,11 @@ The official `laravel/ai` SDK does not include a Bedrock provider, and the upstr
 
 These fixes have been submitted upstream. Once merged, this package will switch back to the official `prism-php/bedrock`.
 
-> **Note:** This package was previously published as `wojt-janowski/laravel-ai-bedrock`. If you're migrating, update your `composer.json` to use `clinically/laravel-ai-bedrock`.
+> **Note:** This package was previously published as `wojt-janowski/laravel-ai-bedrock`. If you're migrating, update your `composer.json` to use `agave-api/laravel-ai-bedrock`.
 
 ## Requirements
 
-- PHP 8.4+
+- PHP 8.3+
 - Laravel 12+
 - `laravel/ai` ^0.3
 - `clinically/prism-bedrock`
@@ -27,7 +27,7 @@ These fixes have been submitted upstream. Once merged, this package will switch 
 ## Installation
 
 ```bash
-composer require clinically/laravel-ai-bedrock
+composer require agave-api/laravel-ai-bedrock
 ```
 
 The service provider is auto-discovered via Laravel's package discovery.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Clinically\LaravelAiBedrock;
+namespace AgaveApi\LaravelAiBedrock;
 
 use Laravel\Ai\Gateway\Prism\PrismGateway;
 use Laravel\Ai\Gateway\TextGenerationOptions;
