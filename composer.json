@@ -10,7 +10,7 @@
   ],
   "require": {
     "php": "^8.3",
-    "laravel/ai": "^0.3",
+    "laravel/ai": "^0.4",
     "clinically/prism-bedrock": "^0.1"
   },
   "require-dev": {
