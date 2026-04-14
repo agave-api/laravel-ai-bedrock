@@ -5,16 +5,19 @@
   "license": "MIT",
   "authors": [
     {
+      "name": "Clinically"
+    },
+    {
       "name": "Agave API"
     }
   ],
   "require": {
     "php": "^8.3",
     "laravel/ai": "^0.4",
-    "clinically/prism-bedrock": "^0.1"
+    "agave-api/prism-bedrock": "@dev"
   },
   "require-dev": {
-    "orchestra/testbench": "^10.0",
+    "orchestra/testbench": "^11.0",
     "phpunit/phpunit": "^11.0"
   },
   "autoload": {
@@ -35,5 +38,11 @@
     }
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "repositories": {
+    "local-prism-bedrock": {
+      "type": "path",
+      "url": "../prism-bedrock"
+    }
+  }
 }
