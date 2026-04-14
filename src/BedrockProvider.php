@@ -3,15 +3,18 @@
 namespace AgaveApi\LaravelAiBedrock;
 
 use Laravel\Ai\Contracts\Providers\EmbeddingProvider;
+use Laravel\Ai\Contracts\Providers\RerankingProvider;
 use Laravel\Ai\Contracts\Providers\TextProvider;
 use Laravel\Ai\Providers\Concerns;
 use Laravel\Ai\Providers\Provider;
 
-class BedrockProvider extends Provider implements EmbeddingProvider, TextProvider
+class BedrockProvider extends Provider implements EmbeddingProvider, TextProvider, RerankingProvider
 {
     use Concerns\GeneratesEmbeddings;
+    use Concerns\Reranks;
     use Concerns\GeneratesText;
     use Concerns\HasEmbeddingGateway;
+    use Concerns\HasRerankingGateway;
     use Concerns\HasTextGateway;
     use Concerns\StreamsText;
 
@@ -65,5 +68,10 @@ class BedrockProvider extends Provider implements EmbeddingProvider, TextProvide
     protected function useDefaultCredentialProvider(): bool
     {
         return empty($this->config['access_key']) && empty($this->config['secret_key']);
+    }
+
+    public function defaultRerankingModel(): string
+    {
+        return $this->config['models']['reranking']['default'] ?? '';
     }
 }
